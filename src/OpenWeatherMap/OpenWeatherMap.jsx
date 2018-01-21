@@ -23,13 +23,13 @@ class OpenWeatherMap extends React.Component {
       },
     }).then((response) => {
       const { data } = response;
-      this.setState({ name: data.name, temp: data.main.temp });
+      this.setState({ name: data.name, temp: data.main.temp, icon: data.weather[0].description });
     });
   }
 
   render() {
-    const { name, temp } = this.state;
-    return <GenericWeather city={name} temp={temp} />;
+    const { name, temp, icon } = this.state;
+    return <GenericWeather city={name} temp={temp} icon={icon} />;
   }
 }
 
