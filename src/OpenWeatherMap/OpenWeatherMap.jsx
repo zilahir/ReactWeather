@@ -29,7 +29,7 @@ class OpenWeatherMap extends React.Component {
 
   render() {
     const { name, temp, icon } = this.state;
-    return <GenericWeather city={name} temp={temp} icon={icon} />;
+    return <GenericWeather city={name} temp={temp} weather={icon} />;
   }
 }
 

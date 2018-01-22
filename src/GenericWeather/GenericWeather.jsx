@@ -5,16 +5,17 @@ import Raining from './../weather/Raining';
 import Cloudy from './../weather/Cloudy';
 import PartlyCloudy from './../weather/PartlyCloudy';
 
-function decideWeather(weather) {
-  return weather === 'loght snow' ? <Snowing /> : <Cloudy />;
+function decideWeather({ weather }) {
+  console.log({ weather });
+  return weather === 'light snow' ? <Snowing /> : <Cloudy />;
 }
 
 function GenericWeather({ city, temp, weather }) {
-  const weatherClass = 'lofasz';
+  console.log('lofasz', weather);
   return (
     <div className="weather-card">
-      <div className={weatherClass} />
-      <Snowing />
+      <div />
+      {decideWeather({ weather })}
       <h1>{temp}</h1>
       <p>{city}</p>
     </div>
@@ -31,6 +32,10 @@ GenericWeather.defaultProps = {
   city: '',
   temp: '',
   weather: '',
+};
+
+decideWeather.propTypes = {
+  weather: PropTypes.string.isRequired,
 };
 
 export default GenericWeather;
