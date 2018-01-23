@@ -1,3 +1,6 @@
+This repo is a fork from AmarShaked/ReactWeather repository. 
+Creating updates for this module in this fork repository. 
+
 ![Alt text](https://raw.githubusercontent.com/AmarShaked/ReactWeather/master/widget.png?raw=true "React Weather")
 
 # ReactWeather
