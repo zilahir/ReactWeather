@@ -6,12 +6,11 @@ import Cloudy from './../weather/Cloudy';
 import PartlyCloudy from './../weather/PartlyCloudy';
 
 function decideWeather({ weather }) {
-  console.log({ weather });
   return weather === 'light snow' ? <Snowing /> : <Cloudy />;
+  // todo: finish this
 }
 
 function GenericWeather({ city, temp, weather }) {
-  console.log('lofasz', weather);
   return (
     <div className="weather-card">
       <div />
